@@ -1,40 +1,41 @@
 # AnimeList
 
-AnimeList è un progetto che permette di gestire e visualizzare una lista di anime in modo semplice e intuitivo.
+Applicazione web che permette di cercare e visualizzare anime, sviluppata come progetto scolastico.
 
-## Funzionalità
+## Descrizione
 
-- Visualizzazione lista anime
-- Ricerca di anime
-- Visualizzazione dettagli anime
+AnimeList è una Single Page Application (SPA) che permette di:
+- Visualizzare i 24 anime più popolari al caricamento della pagina
+- Cercare anime per nome tramite una barra di ricerca
+- Visualizzare la scheda dettagliata di un anime cliccandoci sopra (titolo, valutazione, generi, studio, sinossi, episodi, stato)
 
-## Tecnologie utilizzate
+## Tecnologie usate
 
-- HTML
-- CSS
-- JavaScript
+- Vue.js — framework JavaScript per la costruzione dell'interfaccia
+- CSS — per la grafica e il layout responsive
+- Jikan API v4 — API pubblica e gratuita di MyAnimeList per i dati degli anime
 
+## API
+
+Viene usata la [Jikan API v4](https://jikan.moe/), che non richiede registrazione né chiave API.
+
+Endpoint usati:
+- `GET https://api.jikan.moe/v4/top/anime?limit=24` — carica i top anime all'avvio
+- `GET https://api.jikan.moe/v4/anime?q=PAROLA_CHIAVE&limit=24` — ricerca per nome
 
 ## Struttura del progetto
+animelist/
+├── src/
+│   ├── App.vue               # Componente principale
+│   ├── components/
+│   │   ├── RicercaAnime.vue  # Barra di ricerca e griglia risultati
+│   │   └── SchedaAnime.vue   # Scheda dettaglio anime
+│   └── main.js               # Punto di ingresso
 
-```text
-progetto_animeList/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+## Come avviare il progetto
+
+```bash
+cd animelist
+npm install
+npm run serve
 ```
-
-## Obiettivo del progetto
-
-Questo progetto è stato realizzato per esercitarsi nello sviluppo web
-
-
-## Licenza
-
-Questo progetto è distribuito per scopi didattici.
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
