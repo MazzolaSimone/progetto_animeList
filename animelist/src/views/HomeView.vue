@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="anime logo" src="https://www.pngall.com/wp-content/uploads/13/Anime-Logo-PNG-HD-Image.png" width="400" height="400"/>
+    <HelloWorld msg="ANIMELIST"/>
   </div>
 </template>
 
